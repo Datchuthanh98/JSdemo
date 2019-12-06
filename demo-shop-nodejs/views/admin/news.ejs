@@ -1,0 +1,36 @@
+<%- include('../_layouts/adminheader') %>
+
+<h2 class="new-title">News</h2>
+<a href="/admin/news/add-new" class="btn btn-primary">Add a new New</a>
+<br><br>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Title</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+        
+<% news.forEach(function(neww){ %>
+        <tr id="id_<%= neww._id %>" class="<%= neww.slug %>">
+            <td><%= neww.title %></td>
+            <td><a href="/admin/news/edit-new/<%= neww._id %>">Edit</a></td> 
+            <td><a class="confirmDeletion" href="/admin/news/delete-new/<%= neww._id %>">Delete</a></td>
+        
+        </tr>
+        <% }); %>
+        
+        
+        
+        
+    </tbody>
+</table>
+
+
+
+<script  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"> </script>
+
+<%- include('../_layouts/adminfooter') %>

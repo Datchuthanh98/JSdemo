@@ -1,0 +1,31 @@
+<% include _layouts/header %>
+ 
+<div class="container">
+<div class="row">
+<div class="col-sm-3">
+<div align="center">
+<img src="https://ketquanhanh.vn/images/banner_nha.gif"> <hr>
+<img   width=" 250px"src="http://thebestsoccertips.com/uploads/images/gif/thebest.gif">
+</div>
+</div>
+<div class="col-sm-9">
+<% news.forEach(function(ne){ %>
+            <div class="khung" >
+            <div class="row">
+            <a  class="col-12" href="/news/<%= ne.title %>"><%= ne.title %></a><br>
+                <a class="col-3" href="/news/<%= ne.title %>">
+                <img  width="200px" height="150px" src="<%=ne.totalimg%>">
+                </a>
+                <p class="col-sm-8"><%= ne.total %><p>
+            </div>
+            </div>
+            <hr>
+        <% }); %>
+
+</div>        
+</div>
+</div>
+</div>
+</div>
+
+<% include _layouts/footer %>

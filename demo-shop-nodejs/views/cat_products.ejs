@@ -1,0 +1,51 @@
+<% include _layouts/header %>
+<div class="container"><hr>
+<div class="row">
+    <div class="col-sm-4">
+        <h2>Categories</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/products">All products</a></li>
+            <% categories.forEach(function(c){ %>
+                <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
+            <% }); %>
+        </ul>
+        <hr>
+        <iframe width="350" height="300" src="https://www.youtube.com/embed/NscF7ymfkyQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+        <img  width="350" height="250" src="https://images.vov.vn/h500/uploaded/ymg4g2dyiqely8uzveukg/2017_07_02/Chelsa___Nike_Home_and_Away_Kits_original_1498896605_SLNO.jpg">    
+    </div>
+                
+<div class="col-xl-8"> 
+<div class="row"> 
+    <% products.forEach(function(p){ %>
+            <div class="col-sm-4 col-6">
+            <div align="center">
+             <hr>
+                <a class="pa" href="/products/<%= p.category %>/<%= p.slug %>">
+                    <img class="pimage" src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                </a>
+                <h3><%= p.title %></h3>
+                <h4>$<%= parseFloat(p.price).toFixed(2) %></h4>
+                <a class="vd" href="/products/<%= p.category %>/<%= p.slug %>">View Details</a>
+            </div>
+            </div>
+        <% }); %>
+</div>
+<div  align="right" >
+<div id="fb-root"></div>
+<div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1092605550920667&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="https://www.facebook.com/Dat.Hazard.98/posts/2208081559411763" data-numposts="5" width="100px"></div>
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<% include _layouts/footer %>

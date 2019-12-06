@@ -1,0 +1,27 @@
+<% include _layouts/header %>
+
+<div class="container">
+<h1><%= title %></h1>
+
+<form method="post" action="/users/login">
+    
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Username"  autocomplete="new-name">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control"  placeholder="Password" autocomplete="new-password">
+    </div>
+
+    <button type="submit" class="btn btn-default">Log in</button>
+</form>
+
+<br>
+<a href="/users/auth/fb">
+<button type="button" class="btn btn-primary"> Đăng nhập bằng facebook </button>
+</a>
+</div>
+
+<% include _layouts/footer %>

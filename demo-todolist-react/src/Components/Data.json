@@ -1,0 +1,28 @@
+[
+    {
+        "id":1,
+        "topic":" Làm bài trên lớp  ",
+        "detail":" Bài tập công nghệ phần mềm , lập trinh web , kĩ thuật đồ họa " 
+        
+    } ,
+
+    {
+        "id":2,
+        "topic":" Làm project thực tậpk",
+        "detail":" thực tập Reactjs, Nodejs tại công ty TWINGER ^^ " 
+        
+    } ,
+
+    {
+        "id":3,
+        "topic":" Cày toeic",
+        "detail":" Luyện ETS 2016,ECONOMY với target 600 để ra trường " 
+        
+    } ,
+
+    {
+        "id":4,
+        "topic":"Gánh team",
+        "detail":" Quẩy LOl , bắn PUBG, Đá fifa online 4" 
+    } 
+]

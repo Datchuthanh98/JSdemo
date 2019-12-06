@@ -1,0 +1,31 @@
+<%- include('../_layouts/adminheader') %>
+
+<h2 class="new-title">Edit a new</h2>
+<a href="/admin/news" class="btn btn-primary">Back to all news</a>
+<br><br>
+
+<form method="post" action="/admin/news/edit-new/<%=id%>">
+    
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" name="title" value="<%= title %>" placeholder="Title">
+    </div>
+    
+    <div class="form-group">
+        <label for="">Total</label>
+        <input type="text" class="form-control" name="total" value="<%= total %>" placeholder="Total">
+    </div>
+
+    <div class="form-group">
+    <label for="">Total</label>
+    <input type="text" class="form-control" name="totalimg" value="<%= totalimg %>" placeholder="Total">
+</div>
+     
+    <div class="form-group">
+        <label for="">Content</label>
+        <textarea name="content" class="form-control" id="ta" cols="30" rows="10" placeholder="Content"><%= content %></textarea>
+    </div>
+    <button class="btn btn-success">Submit</button>
+</form>
+
+<%- include('../_layouts/adminfooter') %>
